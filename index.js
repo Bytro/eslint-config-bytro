@@ -12,11 +12,6 @@ module.exports = {
     env: {
         es6: true,
         browser: true,
-        amd: true,
-        commonjs: true,
-    },
-    globals: {
-        BYTRO: true,
     },
     settings: {
         // 'import/resolver': {
