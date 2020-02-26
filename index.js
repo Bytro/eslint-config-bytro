@@ -72,4 +72,22 @@ module.exports = {
         'import/prefer-default-export': 'off',
         'prettier/prettier': ['error'],
     },
+    overrides: [
+        {
+            files: ['**/*.ts'],
+            parser: '@typescript-eslint/parser',
+            parserOptions: {
+                project: './tsconfig.json',
+            },
+            extends: [
+                'eslint:recommended',
+                'plugin:@typescript-eslint/eslint-recommended',
+                'plugin:@typescript-eslint/recommended',
+            ],
+            rules: {
+                'lines-between-class-members': 'off',
+                '@typescript-eslint/no-explicit-any': 'off',
+            },
+        },
+    ],
 };
