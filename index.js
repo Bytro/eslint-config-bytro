@@ -3,7 +3,7 @@ module.exports = {
     plugins: [
         // 'import',
         'only-warn',
-        // 'prettier',
+        'prettier',
     ],
     parser: 'babel-eslint',
     parserOptions: {
@@ -70,6 +70,6 @@ module.exports = {
             },
         ],
         'import/prefer-default-export': 'off',
-        // 'prettier/prettier': ['error'],
+        'prettier/prettier': ['error'],
     },
 };
