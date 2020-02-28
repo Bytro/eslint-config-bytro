@@ -2,7 +2,6 @@ module.exports = {
     extends: ['airbnb-base', 'prettier'],
     plugins: [
         // 'import',
-        'only-warn',
         'prettier',
     ],
     parser: 'babel-eslint',
