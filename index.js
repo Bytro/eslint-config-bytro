@@ -26,6 +26,19 @@ module.exports = {
         'no-continue': 'off',
         'no-param-reassign': 'off',
         'no-plusplus': 'off',
+        'no-restricted-imports': ['error', {
+            'paths': [{
+                'name': 'lodash',
+                'message': 'Please import specific lodash functions one by one (e.g. "import merge from \'lodash/merge\'").',
+            }],
+            'patterns': [
+                'lodash/*',
+                '!lodash/cloneDeep',
+                '!lodash/cloneDeepWith',
+                '!lodash/isEmpty',
+                '!lodash/merge',
+            ],
+        }],
         'no-restricted-syntax': [
             'error',
             {
