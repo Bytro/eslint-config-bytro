@@ -1,9 +1,6 @@
 module.exports = {
-    extends: ['airbnb-base', 'prettier'],
-    plugins: [
-        // 'import',
-        'prettier',
-    ],
+    extends: ['airbnb-base', 'prettier', 'plugin:import/errors', 'plugin:import/warnings'],
+    plugins: ['import', 'prettier'],
     parser: 'babel-eslint',
     parserOptions: {
         ecmaVersion: 8,
@@ -12,13 +9,6 @@ module.exports = {
     env: {
         es6: true,
         browser: true,
-    },
-    settings: {
-        // 'import/resolver': {
-        //     node: {
-        //         moduleDirectory: ['hup/src/main/js', 'hup/src/main', 'node_modules'],
-        //     },
-        // },
     },
     rules: {
         'class-methods-use-this': 'off',
@@ -29,19 +19,25 @@ module.exports = {
         'no-continue': 'off',
         'no-param-reassign': 'off',
         'no-plusplus': 'off',
-        'no-restricted-imports': ['error', {
-            'paths': [{
-                'name': 'lodash',
-                'message': 'Please import specific lodash functions one by one (e.g. "import merge from \'lodash/merge\'").',
-            }],
-            'patterns': [
-                'lodash/*',
-                '!lodash/cloneDeep',
-                '!lodash/cloneDeepWith',
-                '!lodash/isEmpty',
-                '!lodash/merge',
-            ],
-        }],
+        'no-restricted-imports': [
+            'error',
+            {
+                paths: [
+                    {
+                        name: 'lodash',
+                        message:
+                            'Please import specific lodash functions one by one (e.g. "import merge from \'lodash/merge\'").',
+                    },
+                ],
+                patterns: [
+                    'lodash/*',
+                    '!lodash/cloneDeep',
+                    '!lodash/cloneDeepWith',
+                    '!lodash/isEmpty',
+                    '!lodash/merge',
+                ],
+            },
+        ],
         'no-restricted-syntax': [
             'error',
             {
@@ -61,21 +57,14 @@ module.exports = {
         'sort-imports': [
             'error',
             {
-                'ignoreCase': false,
-                'ignoreDeclarationSort': true,
-                'ignoreMemberSort': false,
-                'memberSyntaxSortOrder': ['none', 'all', 'single', 'multiple'],
+                ignoreCase: false,
+                ignoreDeclarationSort: true,
+                ignoreMemberSort: false,
+                memberSyntaxSortOrder: ['none', 'all', 'single', 'multiple'],
             },
         ],
         'import/no-default-export': ['error'],
         'import/no-unresolved': 'off',
-        // 'import/no-unresolved': [
-        //     'error',
-        //     {
-        //         commonjs: true,
-        //         amd: true,
-        //     },
-        // ],
         'import/no-extraneous-dependencies': [
             'error',
             {
@@ -98,6 +87,9 @@ module.exports = {
                 'eslint:recommended',
                 'plugin:@typescript-eslint/eslint-recommended',
                 'plugin:@typescript-eslint/recommended',
+                'plugin:import/errors',
+                'plugin:import/warnings',
+                'plugin:import/typescript',
             ],
             rules: {
                 '@typescript-eslint/no-explicit-any': 'off',
