@@ -21,7 +21,10 @@ module.exports = {
         // },
     },
     rules: {
+        'class-methods-use-this': 'off',
         'global-require': 'off',
+        'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
+        'max-classes-per-file': ['error', 2],
         'no-console': 'off',
         'no-continue': 'off',
         'no-param-reassign': 'off',
@@ -97,8 +100,8 @@ module.exports = {
                 'plugin:@typescript-eslint/recommended',
             ],
             rules: {
-                'lines-between-class-members': 'off',
                 '@typescript-eslint/no-explicit-any': 'off',
+                'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
             },
         },
     ],
