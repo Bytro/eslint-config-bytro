@@ -1,6 +1,6 @@
 module.exports = {
     extends: ['airbnb-base', 'prettier', 'plugin:import/errors', 'plugin:import/warnings'],
-    plugins: ['import', 'prettier'],
+    plugins: ['prettier'],
     parser: 'babel-eslint',
     parserOptions: {
         ecmaVersion: 8,
@@ -60,7 +60,6 @@ module.exports = {
                 ignoreCase: false,
                 ignoreDeclarationSort: true,
                 ignoreMemberSort: false,
-                memberSyntaxSortOrder: ['none', 'all', 'single', 'multiple'],
             },
         ],
         'import/no-default-export': ['error'],
@@ -73,6 +72,25 @@ module.exports = {
                 peerDependencies: false,
             },
         ],
+
+        'import/order': [
+            'error',
+            {
+                'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+                'pathGroups': [
+                    {
+                        'pattern': '{+(config|engine|external|hup|interfaces|model|modules|render|uber|ui|utils|view_models|vue)/**,hup}',
+                        'group': 'internal',
+                    },
+                ],
+                "pathGroupsExcludedImportTypes": ["builtin"],
+                'newlines-between': 'always',
+                'alphabetize': {
+                    order: 'asc',
+                    caseInsensitive: false,
+                }
+            }
+        ],
         'import/prefer-default-export': 'off',
         'prettier/prettier': ['error'],
     },
@@ -84,16 +102,12 @@ module.exports = {
                 project: './tsconfig.json',
             },
             extends: [
-                'eslint:recommended',
                 'plugin:@typescript-eslint/eslint-recommended',
                 'plugin:@typescript-eslint/recommended',
-                'plugin:import/errors',
-                'plugin:import/warnings',
                 'plugin:import/typescript',
             ],
             rules: {
                 '@typescript-eslint/no-explicit-any': 'off',
-                'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
             },
         },
     ],
