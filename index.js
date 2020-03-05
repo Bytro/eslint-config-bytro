@@ -17,6 +17,7 @@ module.exports = {
         'max-classes-per-file': ['error', 2],
         'no-console': 'off',
         'no-continue': 'off',
+        'no-multiple-empty-lines': ['error', { 'max': 1 }],
         'no-param-reassign': 'off',
         'no-plusplus': 'off',
         'no-restricted-imports': [
@@ -108,6 +109,7 @@ module.exports = {
             ],
             rules: {
                 '@typescript-eslint/no-explicit-any': 'off',
+                '@typescript-eslint/no-inferrable-types': 'off',
             },
         },
     ],
