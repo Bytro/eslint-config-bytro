@@ -17,9 +17,11 @@ module.exports = {
         'max-classes-per-file': ['error', 2],
         'no-console': 'off',
         'no-continue': 'off',
+        'no-lonely-if': 'off',
         'no-multiple-empty-lines': ['error', { 'max': 1 }],
         'no-param-reassign': 'off',
         'no-plusplus': 'off',
+        'no-prototype-builtins': 'off',
         'no-restricted-imports': [
             'error',
             {
@@ -73,7 +75,6 @@ module.exports = {
                 peerDependencies: false,
             },
         ],
-
         'import/order': [
             'error',
             {
