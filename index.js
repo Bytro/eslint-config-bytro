@@ -94,7 +94,7 @@ module.exports = {
             }
         ],
         'import/prefer-default-export': 'off',
-        'prettier/prettier': ['error'],
+        'prettier/prettier': ['warn'],
     },
     overrides: [
         {
