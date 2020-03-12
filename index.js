@@ -13,12 +13,12 @@ module.exports = {
     rules: {
         'class-methods-use-this': 'off',
         'global-require': 'off',
-        'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
-        'max-classes-per-file': ['error', 2],
+        'lines-between-class-members': ['warn', 'always', { exceptAfterSingleLine: true }],
+        'max-classes-per-file': ['warn', 2],
         'no-console': 'off',
         'no-continue': 'off',
         'no-lonely-if': 'off',
-        'no-multiple-empty-lines': ['error', { 'max': 1 }],
+        'no-multiple-empty-lines': ['warn', { 'max': 1 }],
         'no-param-reassign': 'off',
         'no-plusplus': 'off',
         'no-prototype-builtins': 'off',
@@ -56,7 +56,7 @@ module.exports = {
         ],
         'no-shadow': 'off',
         'no-underscore-dangle': 'off',
-        'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+        'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
         'sort-imports': 'off',
         'import/no-default-export': ['error'],
         'import/no-unresolved': 'off',
@@ -72,7 +72,7 @@ module.exports = {
         'import/prefer-default-export': 'off',
         'prettier/prettier': 'warn',
         'simple-import-sort/sort': [
-            'error',
+            'warn',
             {
                 'groups': [
                     // side effect imports
