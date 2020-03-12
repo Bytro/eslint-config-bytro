@@ -1,6 +1,6 @@
 module.exports = {
     extends: ['airbnb-base', 'prettier', 'plugin:import/errors', 'plugin:import/warnings'],
-    plugins: ['prettier'],
+    plugins: ['prettier', 'simple-import-sort'],
     parser: 'babel-eslint',
     parserOptions: {
         ecmaVersion: 8,
@@ -57,14 +57,7 @@ module.exports = {
         'no-shadow': 'off',
         'no-underscore-dangle': 'off',
         'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-        'sort-imports': [
-            'error',
-            {
-                ignoreCase: false,
-                ignoreDeclarationSort: true,
-                ignoreMemberSort: false,
-            },
-        ],
+        'sort-imports': 'off',
         'import/no-default-export': ['error'],
         'import/no-unresolved': 'off',
         'import/no-extraneous-dependencies': [
@@ -75,26 +68,32 @@ module.exports = {
                 peerDependencies: false,
             },
         ],
-        'import/order': [
+        'import/order': 'off',
+        'import/prefer-default-export': 'off',
+        'prettier/prettier': 'warn',
+        'simple-import-sort/sort': [
             'error',
             {
-                'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
-                'pathGroups': [
-                    {
-                        'pattern': '{+(config|engine|external|hup|interfaces|model|modules|render|uber|ui|utils|view_models|vue)/**,hup}',
-                        'group': 'internal',
-                    },
+                'groups': [
+                    // side effect imports
+                    ["^\\u0000"],
+                    // packages
+                    ['^@?[a-z]'],
+                    // absolute imports
+                    ['^[^.]'],
+                    // relative imports
+                    ['^\\.'],
+                    // internal modules
+                    ['^(config|engine|external|hup|interfaces|model|modules|render|uber|ui|utils|view_models|vue)(/.*|$)'],
+                    // internal root modules
+                    ['^[A-Z]'],
+                    // internal client
+                    ['^(app|config_env|config_title|game)$'],
+                    // internal assets
+                    ['^(images|shaders|templates)(/.*|$)'],
                 ],
-                "pathGroupsExcludedImportTypes": ["builtin"],
-                'newlines-between': 'always',
-                'alphabetize': {
-                    order: 'asc',
-                    caseInsensitive: false,
-                }
-            }
+            },
         ],
-        'import/prefer-default-export': 'off',
-        'prettier/prettier': ['warn'],
     },
     overrides: [
         {
