@@ -17,7 +17,7 @@ module.exports = {
         'no-console': 'off',
         'no-continue': 'off',
         'no-lonely-if': 'off',
-        'no-multiple-empty-lines': ['warn', { 'max': 1 }],
+        'no-multiple-empty-lines': ['warn', { max: 1 }],
         'no-param-reassign': 'off',
         'no-plusplus': 'off',
         'no-prototype-builtins': 'off',
@@ -73,9 +73,9 @@ module.exports = {
         'simple-import-sort/sort': [
             'warn',
             {
-                'groups': [
+                groups: [
                     // side effect imports
-                    ["^\\u0000"],
+                    ['^\\u0000'],
                     // packages
                     ['^@?[a-z]'],
                     // absolute imports
