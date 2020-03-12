@@ -3,11 +3,10 @@ module.exports = {
     plugins: ['prettier', 'simple-import-sort'],
     parser: 'babel-eslint',
     parserOptions: {
-        ecmaVersion: 8,
         sourceType: 'module',
     },
     env: {
-        es6: true,
+        es2020: true,
         browser: true,
     },
     rules: {
