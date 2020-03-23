@@ -1,13 +1,15 @@
 module.exports = {
-    extends: ['airbnb-base', 'prettier', 'plugin:import/errors', 'plugin:import/warnings'],
-    plugins: ['prettier', 'simple-import-sort'],
-    parser: 'babel-eslint',
-    parserOptions: {
-        sourceType: 'module',
-    },
+    extends: [
+        'airbnb-typescript/base',
+        'prettier',
+        'prettier/@typescript-eslint',
+    ],
+    plugins: [
+        'prettier',
+        'simple-import-sort',
+    ],
     env: {
         es2020: true,
-        browser: true,
     },
     rules: {
         'class-methods-use-this': 'off',
@@ -55,7 +57,7 @@ module.exports = {
         ],
         'no-shadow': 'off',
         'no-underscore-dangle': 'off',
-        'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+        '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
         'sort-imports': 'off',
         'import/no-default-export': ['error'],
         'import/no-unresolved': 'off',
@@ -94,22 +96,4 @@ module.exports = {
             },
         ],
     },
-    overrides: [
-        {
-            files: ['**/*.ts'],
-            parser: '@typescript-eslint/parser',
-            parserOptions: {
-                project: './tsconfig.json',
-            },
-            extends: [
-                'plugin:@typescript-eslint/eslint-recommended',
-                'plugin:@typescript-eslint/recommended',
-                'plugin:import/typescript',
-            ],
-            rules: {
-                '@typescript-eslint/no-explicit-any': 'off',
-                '@typescript-eslint/no-inferrable-types': 'off',
-            },
-        },
-    ],
 };
