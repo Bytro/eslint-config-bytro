@@ -95,5 +95,13 @@ module.exports = {
                 ],
             },
         ],
+
+        // Disable rules that require type checking and enable base rules.
+        // Enabling type information by specifying 'parserOptions.project' requires the whole
+        // project to be build before linting. Currently too slow for large code bases.
+        '@typescript-eslint/no-implied-eval': 'off',
+        'no-implied-eval': 'error',
+        '@typescript-eslint/no-throw-literal': 'off',
+        'no-throw-literal': 'error',
     },
 };
