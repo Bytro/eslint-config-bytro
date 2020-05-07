@@ -58,6 +58,7 @@ module.exports = {
         'no-shadow': 'off',
         'no-underscore-dangle': 'off',
         '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+        "prefer-destructuring": ["error", { "object": true, "array": false }],
         'sort-imports': 'off',
         'import/no-default-export': ['error'],
         'import/no-unresolved': 'off',
