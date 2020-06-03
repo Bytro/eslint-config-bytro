@@ -1,6 +1,7 @@
 module.exports = {
     extends: [
         'airbnb-typescript/base',
+        'plugin:jsdoc/recommended',
         'prettier',
         'prettier/@typescript-eslint',
     ],
@@ -60,6 +61,7 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
         "prefer-destructuring": ["error", { "object": true, "array": false }],
         'sort-imports': 'off',
+
         'import/no-default-export': ['error'],
         'import/no-unresolved': 'off',
         'import/no-extraneous-dependencies': [
@@ -72,7 +74,26 @@ module.exports = {
         ],
         'import/order': 'off',
         'import/prefer-default-export': 'off',
+
+        'jsdoc/check-access': 'warn',
+        'jsdoc/require-description': 'off',
+        'jsdoc/require-hyphen-before-param-description': ['warn', 'never'],
+        'jsdoc/require-jsdoc': ['warn', {
+            publicOnly: false,
+            require: {
+                ArrowFunctionExpression: false,
+                ClassDeclaration: true,
+                ClassExpression: false,
+                FunctionDeclaration: true,
+                FunctionExpression: false,
+                MethodDefinition: true,
+            },
+            exemptEmptyFunctions: true,
+        }],
+        'jsdoc/require-param-description': 'off',
+
         'prettier/prettier': 'warn',
+
         'simple-import-sort/sort': [
             'warn',
             {
@@ -105,4 +126,27 @@ module.exports = {
         '@typescript-eslint/no-throw-literal': 'off',
         'no-throw-literal': 'error',
     },
+    overrides: [
+        {
+            files: ['**/*.ts'],
+            rules: {
+                'jsdoc/no-types': 'warn',
+                'jsdoc/require-jsdoc': ['warn', {
+                    publicOnly: false,
+                    require: {
+                        ArrowFunctionExpression: false,
+                        ClassDeclaration: true,
+                        ClassExpression: false,
+                        FunctionDeclaration: false,
+                        FunctionExpression: false,
+                        MethodDefinition: false,
+                    },
+                    exemptEmptyFunctions: true,
+                }],
+                'jsdoc/require-param-type': 'off',
+                'jsdoc/require-property-type': 'off',
+                'jsdoc/require-returns-type': 'off',
+            },
+        },
+    ],
 };
