@@ -91,6 +91,7 @@ module.exports = {
             exemptEmptyFunctions: true,
         }],
         'jsdoc/require-param-description': 'off',
+        'jsdoc/require-returns-description': 'off',
 
         'prettier/prettier': 'warn',
 
