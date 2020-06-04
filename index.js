@@ -76,6 +76,7 @@ module.exports = {
         'import/prefer-default-export': 'off',
 
         'jsdoc/check-access': 'warn',
+        'jsdoc/no-undefined-types': 'off',
         'jsdoc/require-description': 'off',
         'jsdoc/require-hyphen-before-param-description': ['warn', 'never'],
         'jsdoc/require-jsdoc': ['warn', {
