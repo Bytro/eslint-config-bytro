@@ -126,10 +126,26 @@ module.exports = {
         'no-implied-eval': 'error',
         '@typescript-eslint/no-throw-literal': 'off',
         'no-throw-literal': 'error',
+
+        // use T[] over Array<T>
+        '@typescript-eslint/array-type': ['warn', { default: 'array' }],
+    },
+    settings: {
+        jsdoc: {
+            preferredTypes: {
+                'Array<>': '[]',
+                'Array.<>': '[]',
+            },
+        },
     },
     overrides: [
         {
             files: ['**/*.ts'],
+            settings: {
+                jsdoc: {
+                    mode: 'typescript',
+                },
+            },
             rules: {
                 'jsdoc/no-types': 'warn',
                 'jsdoc/require-jsdoc': ['warn', {
