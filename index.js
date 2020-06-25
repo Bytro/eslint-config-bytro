@@ -84,7 +84,7 @@ module.exports = {
             publicOnly: false,
             require: {
                 ArrowFunctionExpression: false,
-                ClassDeclaration: true,
+                ClassDeclaration: false,
                 ClassExpression: false,
                 FunctionDeclaration: true,
                 FunctionExpression: false,
@@ -154,7 +154,7 @@ module.exports = {
                     publicOnly: false,
                     require: {
                         ArrowFunctionExpression: false,
-                        ClassDeclaration: true,
+                        ClassDeclaration: false,
                         ClassExpression: false,
                         FunctionDeclaration: false,
                         FunctionExpression: false,
