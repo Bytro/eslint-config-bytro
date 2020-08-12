@@ -15,7 +15,7 @@ module.exports = {
     rules: {
         'class-methods-use-this': 'off',
         'global-require': 'off',
-        'lines-between-class-members': ['warn', 'always', { exceptAfterSingleLine: true }],
+        '@typescript-eslint/lines-between-class-members': ['warn', 'always', { exceptAfterSingleLine: true }],
         'max-classes-per-file': ['warn', 2],
         'no-console': 'off',
         'no-continue': 'off',
