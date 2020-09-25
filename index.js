@@ -57,6 +57,7 @@ module.exports = {
             },
         ],
         'no-shadow': 'off',
+        '@typescript-eslint/no-shadow': 'off',
         'no-underscore-dangle': 'off',
         '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', ignoreRestSiblings: true }],
         'prefer-destructuring': ['error', { object: true, array: false }],
