@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-bytro",
-  "version": "2.8.0",
+  "version": "2.9.0",
   "description": "Bytro Labs ESLint configuration",
   "main": "index.js",
   "repository": {
@@ -29,7 +29,7 @@
     "prettier": ">= 2"
   },
   "dependencies": {
-    "eslint-config-airbnb-typescript": "^11.0.0",
-    "eslint-config-prettier": "^6.12.0"
+    "eslint-config-airbnb-typescript": "^12.0.0",
+    "eslint-config-prettier": "^6.15.0"
   }
 }
