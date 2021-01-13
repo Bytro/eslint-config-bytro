@@ -98,7 +98,7 @@ module.exports = {
 
         'prettier/prettier': 'warn',
 
-        'simple-import-sort/sort': [
+        'simple-import-sort/imports': [
             'warn',
             {
                 groups: [
