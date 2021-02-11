@@ -166,7 +166,7 @@ module.exports = {
         '@typescript-eslint/require-await': 'off',
         'require-await': 'error',
         '@typescript-eslint/return-await': 'off',
-        'return-await': 'error',
+        'no-return-await': 'error',
 
         // use T[] over Array<T>
         '@typescript-eslint/array-type': ['warn', { default: 'array' }],
