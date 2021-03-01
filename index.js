@@ -164,7 +164,7 @@ module.exports = {
         '@typescript-eslint/no-throw-literal': 'off',
         'no-throw-literal': 'error',
         '@typescript-eslint/require-await': 'off',
-        'require-await': 'error',
+        'require-await': 'off',
         '@typescript-eslint/return-await': 'off',
         'no-return-await': 'error',
 
