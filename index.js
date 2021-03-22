@@ -110,7 +110,7 @@ module.exports = {
                     // relative imports
                     ['^\\.'],
                     // internal modules
-                    ['^(config|engine|external|hup|interfaces|model|modules|render|types|uber|ui|utils|view_models|vue)(/.*|$)'],
+                    ['^(config|engine|enums|external|hup|interfaces|model|modules|render|types|uber|ui|utils|view_models|vue)(/.*|$)'],
                     // internal root modules
                     ['^[A-Z]'],
                     // internal client
