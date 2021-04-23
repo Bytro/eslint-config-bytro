@@ -199,6 +199,7 @@ module.exports = {
                         MethodDefinition: false,
                     },
                     exemptEmptyFunctions: true,
+                    enableFixer: false,
                 }],
                 'jsdoc/require-param': 'off',
                 'jsdoc/require-returns': 'off',
