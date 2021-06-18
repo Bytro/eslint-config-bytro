@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-bytro",
-  "version": "2.17.2",
+  "version": "2.18.0",
   "description": "Bytro Labs ESLint configuration",
   "main": "index.js",
   "repository": {
@@ -23,7 +23,7 @@
     "@typescript-eslint/parser": "4.x",
     "eslint": "7.x",
     "eslint-plugin-import": "2.x",
-    "eslint-plugin-jsdoc": ">= 31",
+    "eslint-plugin-jsdoc": ">= 35",
     "eslint-plugin-prettier": "3.x",
     "eslint-plugin-simple-import-sort": "7.x",
     "prettier": "2.x"

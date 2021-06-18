@@ -95,6 +95,16 @@ module.exports = {
         }],
         'jsdoc/require-param-description': 'off',
         'jsdoc/require-returns-description': 'off',
+        'jsdoc/tag-lines': [
+            'warn',
+            'any',
+            {
+                tags: {
+                    param: { lines: 'never' },
+                    returns: { lines: 'never' },
+                },
+            }
+        ],
 
         'prettier/prettier': 'warn',
 
