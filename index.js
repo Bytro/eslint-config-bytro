@@ -2,11 +2,14 @@ module.exports = {
     extends: [
         'airbnb-typescript/base',
         'plugin:jsdoc/recommended',
+        'plugin:import/recommended',
+        'plugin:import/typescript',
         'prettier',
     ],
     plugins: [
-        'prettier',
+        'import',
         'simple-import-sort',
+        'prettier',
     ],
     env: {
         es2020: true,
