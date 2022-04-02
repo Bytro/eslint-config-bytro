@@ -194,6 +194,12 @@ module.exports = {
     },
     overrides: [
         {
+            files: ['**/*.d.ts'],
+            rules: {
+                'import/no-default-export': 'off',
+            },
+        },
+        {
             files: ['**/*.ts'],
             settings: {
                 jsdoc: {
