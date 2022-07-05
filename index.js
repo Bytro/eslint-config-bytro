@@ -1,5 +1,6 @@
 module.exports = {
     extends: [
+        'airbnb-base',
         'airbnb-typescript/base',
         'plugin:jsdoc/recommended',
         'plugin:import/recommended',
