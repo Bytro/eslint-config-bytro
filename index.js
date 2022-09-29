@@ -208,6 +208,9 @@ module.exports = {
                 },
             },
             rules: {
+                // enforce import over require()
+                '@typescript-eslint/no-require-imports': 'error',
+
                 'jsdoc/no-types': 'warn',
                 'jsdoc/require-jsdoc': ['warn', {
                     publicOnly: false,
