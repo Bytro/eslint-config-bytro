@@ -184,6 +184,8 @@ module.exports = {
 
         // use T[] over Array<T>
         '@typescript-eslint/array-type': ['warn', { default: 'array' }],
+        // enforce import over require()
+        '@typescript-eslint/no-require-imports': 'error',
     },
     settings: {
         jsdoc: {
@@ -208,9 +210,6 @@ module.exports = {
                 },
             },
             rules: {
-                // enforce import over require()
-                '@typescript-eslint/no-require-imports': 'error',
-
                 'jsdoc/no-types': 'warn',
                 'jsdoc/require-jsdoc': ['warn', {
                     publicOnly: false,
