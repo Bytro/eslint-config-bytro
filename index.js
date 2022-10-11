@@ -200,6 +200,7 @@ module.exports = {
             files: ['**/*.d.ts'],
             rules: {
                 'import/no-default-export': 'off',
+                'jsdoc/require-returns-check': 'off',
             },
         },
         {
