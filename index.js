@@ -103,6 +103,7 @@ module.exports = {
             'warn',
             'any',
             {
+                startLines: 1,
                 tags: {
                     param: { lines: 'never' },
                     returns: { lines: 'never' },
