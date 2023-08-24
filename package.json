@@ -19,8 +19,8 @@
   "author": "Bytro Labs <tech@bytro.com>",
   "license": "UNLICENSED",
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "~5",
-    "@typescript-eslint/parser": "~5",
+    "@typescript-eslint/eslint-plugin": "~6",
+    "@typescript-eslint/parser": "~6",
     "eslint": "~8",
     "eslint-plugin-import": "~2",
     "eslint-plugin-jsdoc": ">= 38",
@@ -31,6 +31,6 @@
   "dependencies": {
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
-    "eslint-config-prettier": "^8.8.0"
+    "eslint-config-prettier": "^9.0.0"
   }
 }
