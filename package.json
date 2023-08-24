@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-bytro",
-  "version": "2.26.3",
+  "version": "2.26.4",
   "description": "Bytro Labs ESLint configuration",
   "main": "index.js",
   "repository": {
