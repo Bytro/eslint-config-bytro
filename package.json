@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-bytro",
-  "version": "2.26.8",
+  "version": "2.26.9",
   "description": "Bytro Labs ESLint configuration",
   "main": "index.js",
   "repository": {
@@ -19,8 +19,8 @@
   "author": "Bytro Labs <tech@bytro.com>",
   "license": "UNLICENSED",
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "~6",
-    "@typescript-eslint/parser": "~6",
+    "@typescript-eslint/eslint-plugin": "~7",
+    "@typescript-eslint/parser": "~7",
     "eslint": "~8",
     "eslint-plugin-import": "~2",
     "eslint-plugin-jsdoc": ">= 38",
