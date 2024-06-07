@@ -23,9 +23,9 @@
     "@typescript-eslint/parser": "~7",
     "eslint": "~8",
     "eslint-plugin-import": "~2",
-    "eslint-plugin-jsdoc": ">= 38",
+    "eslint-plugin-jsdoc": ">= 48",
     "eslint-plugin-prettier": "~5",
-    "eslint-plugin-simple-import-sort": "~10",
+    "eslint-plugin-simple-import-sort": "~12",
     "prettier": "~3"
   },
   "dependencies": {
